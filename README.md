@@ -1,11 +1,13 @@
 # Federated Learning from noise
 
 This code is an implementation to do Federated Learing (FL) from noise using Knowledge Distillation (KD)
+Currently, this work only supports MNIST.
 
 **Motivation**: FL benefits the privacy concern when training a machine learning models by sharing client weights instead of client datasets. However, recently, some research works claim that sharing weights may not be ideal due to inverse attacks. To this ends, we attempt to do FL by utilizing KD and noise image.
 
-**Overview of proposed method**
+The proposed framework not only benefit the privacy but also significantly reduce communication time.
 
+![Alt text](figures/framework.png?raw=true "Overview of proposed method")
 
 ## Install Requirements:
 ```pip3 install -r requirements.txt```
@@ -30,14 +32,14 @@ python generate_niid_dirichlet.py --sampling_ratio 0.1 --alpha 0.1 --n_user 20
 There is a main file "main.py" which allows running all experiments.
 There are some done experiments for this project, including:
 
-##### DO FL on MNIST using EMNIST (out-of-domain dataset)
+**DO FL on MNIST using EMNIST (out-of-domain dataset)**
 ```bash scripts/run_G_EMNIST_MNIST0.1.sh```
 
-##### DO FL on MNIST using client dataset (in-of-domain dataset)
+**DO FL on MNIST using client dataset (in-of-domain dataset)**
 ```bash scripts/run_Indomain_MNIST0.1.sh```
 
-##### DO FL on MNIST using noise
+**DO FL on MNIST using noise**
 ```bash scripts/run_G_noise_MNIST0.1.sh```
 
 ## Highlight result
-
+![Alt text](figures/result.png?raw=true "Current result")
