@@ -43,3 +43,6 @@ There are some done experiments for this project, including:
 
 ## Highlight result
 ![Alt text](figures/result.png?raw=true "Current result")
+
+## Acknowledgement
+We gratefully acknowledge the work FedGen: https://github.com/zhuangdizhu/FedGen 
